@@ -1,4 +1,4 @@
-package br.ce.wcaquino.taskbackend.model;
+package br.ce.bruno.taskbackend.model;
 
 import java.time.LocalDate;
 

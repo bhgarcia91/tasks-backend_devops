@@ -1,8 +1,8 @@
-package br.ce.wcaquino.taskbackend.controller;
+package br.ce.bruno.taskbackend.controller;
 
-import br.ce.wcaquino.taskbackend.model.Task;
-import br.ce.wcaquino.taskbackend.repo.TaskRepo;
-import br.ce.wcaquino.taskbackend.utils.ValidationException;
+import br.ce.bruno.taskbackend.model.Task;
+import br.ce.bruno.taskbackend.repo.TaskRepo;
+import br.ce.bruno.taskbackend.utils.ValidationException;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;

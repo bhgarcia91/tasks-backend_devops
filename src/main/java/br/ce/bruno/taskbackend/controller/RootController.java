@@ -1,4 +1,4 @@
-package br.ce.wcaquino.taskbackend.controller;
+package br.ce.bruno.taskbackend.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

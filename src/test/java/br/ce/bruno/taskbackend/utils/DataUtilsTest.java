@@ -1,8 +1,7 @@
-package br.ce.wcaquino.taskbackend.utils;
+package br.ce.bruno.taskbackend.utils;
 
 import org.junit.Assert;
 import org.junit.Test;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.time.LocalDate;
 
