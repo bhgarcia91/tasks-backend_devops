@@ -1,8 +1,10 @@
 pipeline {
     agent any
     stages {
-        stage ('Just Test'){
-            bat 'echo mudança'
+        stage ('Just Test') {
+            steps {
+                bat 'echo mudanca'
+            }
         }
     }
 }
