@@ -11,9 +11,9 @@ pipeline {
                 bat 'mvn test'
             }
         }
-        stage ('Sonar Analysis') {
+        stage ('Build Test') {
             environment {
-                    scannerHome = tool 'SONAR_SCANNER'
+                scannerHome = tool 'SONAR_SCANNER'
             }
             steps {
                 withSonarQubeEnv('SONAR_SCANNER'){
@@ -23,4 +23,3 @@ pipeline {
         }
     }
 }
-
