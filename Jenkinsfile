@@ -81,14 +81,14 @@ pipeline {
             steps {
                 sleep(3)
                 dir('functional test'){
-                    bat 'mvn verify -DskipTests'
+                    bat 'mvn failsafe:verify -DskipTests'
                 }
             }
         }
     }
     post {
         always {
-            junit allowEmptyResults: true, testResults: 'target/surefire-reports/*.xml, api test/target/surefire-reports/*.xml, functional test/target/surefire-reports/*.xml, '
+            junit allowEmptyResults: true, testResults: 'target/surefire-reports/*.xml, api test/target/surefire-reports/*.xml, functional test/target/surefire-reports/*.xml, functional test/target/failsafe-reports/*.xml'
         }
     }
 }
