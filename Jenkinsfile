@@ -81,9 +81,14 @@ pipeline {
             steps {
                 sleep(5)
                 dir('functional-test'){
-                    bat 'mvn verify "-Dskip.surefire.tests=true"'
+                    bat 'mvn verify -DskipTests'
                 }
             }
+        }
+    }
+    post {
+        always {
+            junit allowEmptyResults: true, testResults: 'target/surefire-reports/*.xml, api test/target/surefire-reports/*.xml, functional test/target/surefire-reports/*.xml, '
         }
     }
 }
