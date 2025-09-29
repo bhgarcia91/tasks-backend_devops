@@ -81,7 +81,7 @@ pipeline {
             steps {
                 sleep(3)
                 dir('functional test'){
-                    bat 'mvn failsafe:verify -DskipTests'
+                    bat 'mvn -B failsafe:integration-test failsafe:verify'
                 }
             }
         }
