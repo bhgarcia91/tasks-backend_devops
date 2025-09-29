@@ -80,7 +80,7 @@ pipeline {
         stage ('Health Check'){
             steps {
                 sleep(3)
-                dir('functional-test'){
+                dir('functional test'){
                     bat 'mvn verify -DskipTests'
                 }
             }
