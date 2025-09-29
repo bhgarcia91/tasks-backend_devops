@@ -35,8 +35,8 @@ pipeline {
         }
         stage ('Quality Gate') {
             steps {
-                sleep(5)
-                timeout(time: 1, unit: 'MINUTES'){
+                sleep(3)
+                timeout(time: 2, unit: 'MINUTES'){
                     waitForQualityGate abortPipeline:true
                 }
             }
@@ -79,7 +79,7 @@ pipeline {
         }
         stage ('Health Check'){
             steps {
-                sleep(5)
+                sleep(3)
                 dir('functional-test'){
                     bat 'mvn verify -DskipTests'
                 }
